@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo1"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:scaleX="1.2"
+                android:scaleY="1.4"
+                android:src="@drawable/titulo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/srch"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/srch"
+                android:layout_width="220dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/margen3"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/lstv1"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:divider="@drawable/lst_divider"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.035">
+
+    </ListView>
+
+
+    <ImageButton
+        android:id="@+id/imgbtn"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:onClick="AgregarDeuda"
+        android:scaleType="fitCenter"
+        android:src="@drawable/btn1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.9"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imgvf"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        android:visibility="visible"
+        android:src="@drawable/icofondo"
+        app:layout_constraintBottom_toBottomOf="@+id/lstv1"
+        app:layout_constraintEnd_toEndOf="@+id/lstv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/btndeudas"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/margen"
+        android:enabled="false"
+        android:text="Deudores"
+        android:textColor="#FFFDFD"
+        app:layout_constraintBottom_toTopOf="@+id/imgbtn"
+        app:layout_constraintEnd_toStartOf="@+id/btninfo"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lstv1"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/btninfo"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/margen"
+        android:text="Informe"
+        android:textColor="#393939"
+        app:layout_constraintBottom_toTopOf="@+id/imgbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.699"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lstv1"
+        app:layout_constraintVertical_bias="0.6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
